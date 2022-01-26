@@ -7,6 +7,8 @@ on:
     types: [created, edited]
   workflow_dispatch:
     branches: [ main ]
+env:
+  BASE_URL: ${{ secrets.BASE_URL }}
 jobs:
   # for Pull Request (exclude merged)
   pullreq_build:
@@ -54,8 +56,6 @@ jobs:
     name: Build(pushed)
     if: (github.repository == 'HisashiHasebe/sample-service-site' && (github.event_name == 'push' || github.event_name == 'workflow_dispatch'))
     runs-on: ubuntu-latest
-    env:
-      BASE_URL: ${{ secrets.BASE_URL }}
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v2
