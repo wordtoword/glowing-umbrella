@@ -18,7 +18,7 @@ export default {
   async asyncData({ $axios, app }) {
     try {
       const response = await $axios.$get(
-        process.env.BASE_URL + '/rcms-api/3/service/3'
+        'https://sample-service-site.g.kuroco.app/rcms-api/3/service/3'
         )
         console.log(response)
         return { response }
