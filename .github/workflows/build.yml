@@ -14,12 +14,6 @@ jobs:
     if: (github.repository == 'HisashiHasebe/sample-service-site' && github.event_name == 'issue_comment' && startsWith(github.event.comment.body, '/kuroco stage') && github.event.issue.pull_request != null)
     runs-on: ubuntu-latest
     steps:
-    - name: Create env file
-        run: |
-          touch .env
-          echo BASE_URL="https://sample-service-site.g.kuroco.app" >> .env
-          echo API_SECRET=1234 >> .env
-          cat .env
       - name: "Get branch name and sha"
         id: get_branch
         run: |
@@ -67,6 +61,12 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: '12.x'
+    - name: Create env file
+        run: |
+          touch .env
+          echo BASE_URL="https://sample-service-site.g.kuroco.app" >> .env
+          echo API_SECRET=1234 >> .env
+          cat .env
       - name: Install dependencies
         run: npm ci
       - name: Build
