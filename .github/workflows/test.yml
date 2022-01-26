@@ -1,7 +1,7 @@
 name: Hello
 on: push
 env:
-  SECRET_HOGE_1: ${{secrets.SECRET_HOGE}} ## ※1
+  SECRET_HOGE_1: ${{secrets.BASE_URL}} ## ※1
 jobs:
   hello:
     runs-on: ubuntu-latest
@@ -10,7 +10,7 @@ jobs:
       - name: Test
         env:
           TEST_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          TEST_SECRET: ${{ secrets.TEST_SECRET }}
+          BASE_URL: ${{ secrets.BASE_URL }}
         run: |
           echo ${#TEST_GITHUB_TOKEN}
-          echo ${#TEST_SECRET}
+          echo ${#BASE_URL}
