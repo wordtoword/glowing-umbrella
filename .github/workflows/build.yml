@@ -7,10 +7,9 @@ on:
     types: [created, edited]
   workflow_dispatch:
     branches: [ main ]
-
+env:
+  BASE_URL: ${{ secrets.BASE_URL }}
 jobs:
-  env:
-    BASE_URL: ${{ secrets.BASE_URL }}
   # for Pull Request (exclude merged)
   pullreq_build:
     name: Build(pullreq)
