@@ -1,4 +1,6 @@
 name: Build and deploy to Kuroco front
+env:
+  BASE_URL: ${{ secrets.BASE_URL }}
 on:
   push:
     branches:
@@ -7,8 +9,6 @@ on:
     types: [created, edited]
   workflow_dispatch:
     branches: [ main ]
-env:
-  BASE_URL: ${{ secrets.BASE_URL }}
 jobs:
   # for Pull Request (exclude merged)
   pullreq_build:
