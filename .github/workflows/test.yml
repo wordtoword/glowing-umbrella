@@ -1,0 +1,7 @@
+- name: Test
+  env:
+    TEST_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    TEST_SECRET: ${{ secrets.BASE_URL }}
+  run: |
+    echo ${#TEST_GITHUB_TOKEN}
+    echo ${#BASE_URL}
