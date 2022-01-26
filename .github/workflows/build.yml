@@ -69,6 +69,12 @@ jobs:
           node-version: '12.x'
       - name: Install dependencies
         run: npm ci
+      - name: Create env file
+        run: |
+          touch .env
+          echo BASE_URL="https://sample-service-site.g.kuroco.app" >> .env
+          echo API_SECRET=1234 >> .env
+          cat .env
       - name: Build
         run: npm run build
       - name: Generate
