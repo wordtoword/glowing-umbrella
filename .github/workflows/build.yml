@@ -61,7 +61,7 @@ jobs:
       - shell: bash
         run: |
           touch .env
-          echo "BASE_URL= ${{secrets.BASE_URL}}" >> .env
+          echo BASE_URL= "${{secrets.BASE_URL}}" >> .env
           cat .env
       - name: Use Node.js
         uses: actions/setup-node@v1
