@@ -1,15 +1,15 @@
 name: Hello
 on: push
 env:
-  SECRET_HOGE_1: ${{secrets.SECRET_HOGE}} ## ※1
+  SECRET_HOGE_1: ${{secrets.BASE_URL}} ## ※1
 jobs:
   hello:
     runs-on: ubuntu-latest
     name: Hello
     steps:
       - name: Checkout
-        uses: actions/checkout@master
+        uses: actions/checkout@main
       - name: run hello action
         env:
-          SECRET_HOGE_2: ${{secrets.SECRET_HOGE}}  ## ※2
+          SECRET_HOGE_2: ${{secrets.BASE_URL}}  ## ※2
         uses: ./.github/actions/hello
