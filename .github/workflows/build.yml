@@ -58,7 +58,6 @@ jobs:
       - name: Checkout Repo
         uses: actions/checkout@v2
       - name: Create env file
-      - shell: bash
         run: |
           touch .env
           echo BASE_URL= "${{secrets.BASE_URL}}" >> .env
