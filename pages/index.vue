@@ -18,7 +18,7 @@ export default {
   async asyncData({ $axios, app }) {
     try {
       const response = await $axios.$get(
-        `${domain}/rcms-api/3/service/3`
+        process.env.BASE_URL + '/rcms-api/3/service/3'
         )
         console.log(response)
         return { response }
