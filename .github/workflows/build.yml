@@ -57,12 +57,11 @@ jobs:
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v2
-      - name: Create env file
+      - shell: bash
+        env:
+          BASE_URL: ${{ secrets.BASE_URL }}
         run: |
-          touch .env
-          echo BASE_URL= "${{secrets.BASE_URL}}" >> .env
-          echo API_SECRET= ${{secrets.API_SECRET}} >> .env
-          cat .env
+          example-command "$BASE_URL"
       - name: Use Node.js
         uses: actions/setup-node@v1
         with:
