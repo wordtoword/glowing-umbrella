@@ -1,6 +1,4 @@
 name: Build and deploy to Kuroco front
-env:
-  BASE_URL: ${{ secrets.BASE_URL }}
 on:
   push:
     branches:
@@ -59,6 +57,11 @@ jobs:
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v2
+      - name: Create env file
+        run: |
+          touch .env
+          echo BASE_URL=${{ secrets.BASE_URL }} >> .env
+          cat .env
       - name: Use Node.js
         uses: actions/setup-node@v1
         with:
