@@ -7,6 +7,8 @@ on:
     types: [created, edited]
   workflow_dispatch:
     branches: [ main ]
+env:
+  BASE_URL: ${{secrets.BASE_URL}}
 jobs:
   # for Pull Request (exclude merged)
   pullreq_build:
@@ -60,7 +62,7 @@ jobs:
       - name: Create env file
         run: |
           touch .env
-          echo BASE_URL = ${{env.BASE_URL}} >> .env
+          echo BASE_URL = ${#BASE_URL} >> .env
           cat .env
       - name: Use Node.js
         uses: actions/setup-node@v1
