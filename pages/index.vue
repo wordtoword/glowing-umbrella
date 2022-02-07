@@ -1,84 +1,124 @@
 <template>
-  <div>
-    <div class="banner">
-      <img :src="response.details.ext_col_01.url" />
-      <div class="banner_text">
+  <main>
+    <header class="hero" :style="{backgroundImage: `url(${response.details.ext_col_01.url})`}">
+      <div class="hero__text">
         <h1>{{ response.details.ext_col_02 }}</h1>
         <p>{{ response.details.ext_col_03 }}</p>
       </div>
-    </div>
+    </header>
 
-    <h2>WORKS</h2>
-    <div v-for="n in response.details.ext_col_04" :key="n.slag" class="works">
-      <img :src="n.ext_col_04.url" />
-      <div>
-        <div class="works_title">{{ n.ext_col_05 }}</div>
-        <div class="works_text">{{ n.ext_col_06 }}</div>
-      </div>
-    </div>
+    <section>
+        <h2>WORKS</h2>
+        <ul>
+            <li v-for="n in response.details.ext_col_04" :key="n.slag" class="works__item">
+                <img :src="n.ext_col_04.url" />
+                <div class="works__item__text">
+                    <h3>{{ n.ext_col_05 }}</h3>
+                    <p>{{ n.ext_col_06 }}</p>
+                </div>
+            </li>
+        </ul>
+    </section>
 
-    <h2>ABOUT</h2>
-    <div class="about">
-      <div class="about_text" v-html="response.details.ext_col_07"></div>
-    </div>
-  </div>
+    <section class="about">
+        <h2>ABOUT</h2>
+        <p v-html="response.details.ext_col_07"></p>
+    </section>
+  </main>
 </template>
 
 <style>
-.banner {
-  position: relative;
+body { 
+    margin: 0;
+    font-size: 1em;
+    line-height: 1.5;
 }
-.banner img {
-  width: 100%;
+ul { 
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
-.banner_text {
-  width: 45%;
-  position: absolute;
-  text-align: right;
-  top: 30%;
-  right: 5%;
-  bottom: 20%;
-}
-.banner_text p {
-  font-size: 1.5rem;
-}
-.title_text p {
-  width: 100%;
-}
-.works {
-  display: flex;
-  margin-right: 30px;
-  margin-left: 30px;
-}
-.works_title {
-  margin-top: 50px;
-  font-size: 3rem;
-}
-.works_text {
-  width: 90%;
-  font-size: 1.5rem;
-}
-.works img {
-  width: 400px;
-  padding: 50px;
-}
-.about {
-  display: flex;
-  justify-content: center;
-  margin: 30px;
-}
-.about_text {
-  margin-right: 200px;
-  margin-left: 200px;
-  font-size: 1.5rem;
+img { max-width: 100%; }
+section {
+  max-width: 1200px;
+  margin: 3em auto;
+  padding: 0 20px;
 }
 h1 {
-  font-size: 3rem;
+  margin: .5em 0;
+  font-size: 1.8em;
 }
 h2 {
+  margin: 2em auto;
+  font-size: 1.5em;
   text-align: center;
-  font-size: 3.5rem;
-  margin-top: 100px;
+}
+h3 {
+  margin: 1em auto;
+  font-size: 1.2em;
+}
+p {
+  margin: 1em 0;
+  font-size: .75em;
+}
+.hero {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  background-position: center center;
+  background-size: cover;
+}
+.hero__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 0 20px;
+}
+.works__item:not(:first-child) {
+    margin-top: 3em;
+}
+@media screen and (max-width: 767px) {
+  .hero::before {
+      width: 100%;
+      height: 300px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: rgba(0,0,0,.5);
+      z-index: 1;
+      content: "";
+  }
+  .hero__text { 
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: #fff;
+      z-index: 10;
+  }
+}
+@media screen and (min-width: 768px) {
+  body {
+      font-size: 2em;
+  }
+  .hero {
+    height: 600px;
+  }
+  .hero__text {
+      width: 1200px;
+      align-items: flex-end;
+      margin: auto;
+  }
+  .hero__text p { width: 600px; }
+  .works__item {
+      display: flex;
+  }
+  .works__item img {
+      width: 400px;
+      margin-right: 2em;
+  }
+  .about { text-align: center; }
 }
 </style>
 
