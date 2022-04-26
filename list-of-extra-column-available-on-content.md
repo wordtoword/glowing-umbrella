@@ -1,23 +1,23 @@
 ---
-title: コンテンツ定義で利用できる拡張項目一覧
-category: コンテンツ
+title: List of additional fields available in the content structure
+category: Content
 weight: 1
 ---
-コンテンツ定義は、デフォルトで下記４つのフィールド項目を所有しています。
 
-- トピックスID/Slug
-- 日付
-- タイトル
-- コンテンツ(Wysiwyg)
+By default, the content editor contains the following 3 fields: 
+- Topic ID/Slug
+- Date
+- Title
 
-[![Image (fetched from Gyazo)](https://rcms.g.kuroco-img.app/files/user/gyazo/38c8cb7d8720ce8ef3e0a211e310d62a.png?width=600)](https://diverta.gyazo.com/38c8cb7d8720ce8ef3e0a211e310d62a)
+[![Image from Gyazo](https://t.gyazo.com/teams/diverta/58ffd2e6c2f2cc9ae7026d9f72ea8b65.png)](https://diverta.gyazo.com/58ffd2e6c2f2cc9ae7026d9f72ea8b65)
 
-フィールド項目はコンテンツ定義編集で拡張項目を設定することで追加することができます。
+You can set up additional fields using the content structure editor.
 
-参考: [コンテンツ定義編集 拡張項目](/ja/docs/management/content-structure-topics-group/#拡張項目)
+See [Content structure - Extended items](/docs/management/content-structure-topics-group/#extended-items) for a detailed guide.
 
-[![Image (fetched from Gyazo)](https://rcms.g.kuroco-img.app/files/user/gyazo/e496e1969255b7eb1f33680e095da8e2.png?width=600)](https://diverta.gyazo.com/e496e1969255b7eb1f33680e095da8e2)
+[![Image from Gyazo](https://t.gyazo.com/teams/diverta/4d054a9b6a1b59344039b26dd344fd79.png)](https://diverta.gyazo.com/4d054a9b6a1b59344039b26dd344fd79)
 
+Extended items can also be configured by clicking on "Settings" to open the settings screen, where you can set input restrictions and the content to be displayed.
 また、拡張項目は[設定]をクリックして設定画面を開くと、入力制限や表示させる内容を設定することができます。  
 
 [![Image (fetched from Gyazo)](https://rcms.g.kuroco-img.app/files/user/gyazo/d33a6204935c6041db2b78ec42b8f7d5.png?width=600)](https://diverta.gyazo.com/d33a6204935c6041db2b78ec42b8f7d5)
