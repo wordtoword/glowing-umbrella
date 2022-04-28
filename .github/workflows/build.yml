@@ -45,9 +45,9 @@ jobs:
       - name: Webhook
         uses: diverta/workflow-webhook@v1
         env:
-          webhook_url: "https://doc-sample.g.kuroco.app/direct/menu/github/"
+          webhook_url: "https://doc-sample2.g.kuroco.app/direct/menu/github/"
           webhook_secret: "1912987e7a16cce9f030d29389b33ec0"
-          data: '{"domain":"doc-sample.g.kuroco-front.app","pr":"${{ github.event.issue.pull_request.url }}",  "repository":"${{ github.repository }}", "run_id":"${{ github.run_id }}", "hash":"${{ steps.get_branch.outputs.sha }}"}'
+          data: '{"domain":"doc-sample2.g.kuroco-front.app","pr":"${{ github.event.issue.pull_request.url }}",  "repository":"${{ github.repository }}", "run_id":"${{ github.run_id }}", "hash":"${{ steps.get_branch.outputs.sha }}"}'
           
   #for Push
   pushed_build:
@@ -76,6 +76,6 @@ jobs:
       - name: Webhook
         uses: diverta/workflow-webhook@v1
         env:
-          webhook_url: "https://doc-sample.g.kuroco.app/direct/menu/github/"
+          webhook_url: "https://doc-sample2.g.kuroco.app/direct/menu/github/"
           webhook_secret: "1912987e7a16cce9f030d29389b33ec0"
-          data: '{"domain":"doc-sample.g.kuroco-front.app", "repository":"${{ github.repository }}", "run_id":"${{ github.run_id }}", "hash":"${{ github.sha }}"}'
+          data: '{"domain":"doc-sample2.g.kuroco-front.app", "repository":"${{ github.repository }}", "run_id":"${{ github.run_id }}", "hash":"${{ github.sha }}"}'
