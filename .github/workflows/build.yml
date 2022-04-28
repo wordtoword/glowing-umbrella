@@ -17,7 +17,7 @@ jobs:
       - name: "Get branch name and sha"
         id: get_branch
         run: |
-          PR=$(curl -H "Authorization: token 1912987e7a16cce9f030d29389b33ec0" https://doc-sample.g.kuroco.app/direct/menu/github/?pr=${{ github.event.issue.pull_request.url }})
+          PR=$(curl -H "Authorization: token 1912987e7a16cce9f030d29389b33ec0" https://doc-sample2.g.kuroco.app/direct/menu/github/?pr=${{ github.event.issue.pull_request.url }})
           echo "::set-output name=branch::$(echo $PR | jq -r '.ref')"
           echo "::set-output name=sha::$(echo $PR | jq -r '.sha')"
       - name: Checkout Repo
