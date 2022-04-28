@@ -271,8 +271,33 @@ Purpose of attendance and task summary
 
 申請フラグ (Flag)
 
-### 在宅勤務事前申請(Apply for working from home)
+### 在宅勤務事前申請 (Work from home application)
 
+在宅勤務を行う際に、日時や業務内容などを事前に申請してください。   
+Please apply in advance with the date, time, and contents of the work if you are working from home.
+
+Subject
+- 件名で内容が分かる様に簡潔に記入して下さい。
+例：商品名、個数など   
+Please briefly summarize the contents of your request in the subject line.
+(e.g., items, quantity, etc.)
+
+在宅勤務希望日 (Preferred work from home date)
+
+勤務開始予定時刻 (Planned start time)
+
+勤務終了予定時刻 (Planned end time)
+
+在宅勤務希望理由 (Reason for working from home)
+
+業務内容（予定） (Planned work contents)
+
+申請フラグ (Flag)
+
+### 取引先申請（新規・変更） (Supplier application (new/changed))
+
+取引先（顧客・外注先）の口座開設時の新規申請、及び既存の修正依頼フォームです   
+This is a form for requesting a new application or modification of an existing one when opening an account with a business partner (customer or subcontractor)
 
 取引先申請（新規・変更）
 受入連絡(Join)
