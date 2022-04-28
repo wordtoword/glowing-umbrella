@@ -121,6 +121,8 @@ Briefly describe the product/service that you are purchasing.
 
 ### 出張申請 (Business trip application)
 
+出張先での交通費や接待費も含めて、申請してください。
+
 Subject
 - 件名で内容が分かる様に簡潔に記入して下さい。
 例：商品名、個数など   
@@ -155,6 +157,8 @@ Transportation and lodging booked
 
 ### 名刺発注 (Business card order)
 
+名刺を発注する際に申請してください。
+
 Subject
 - 件名 に「名刺発注者の名前」を記載して下さい。
 Please include the name of the person ordering the business card in the subject line.
@@ -165,16 +169,111 @@ You can order a minimum of 10 pieces in units of 10.
 
 お届け希望日 (Preferred delivery date)
 
-特記事項
-- 肩書きなどの指定がある場合はご記入ください。
+特記事項 (Special instructions)
+- 肩書きなどの指定がある場合はご記入ください。   
+Please indicate here if you have a professional title or other designation.
+
+申請フラグ (Flag)
+
+### 押印申請（角印） (Certified/square seal application)
+
+見積書、請求書、発注書などの角印の申請はこちら。
+
+Subject
+- 件名で内容が分かる様に簡潔に記入して下さい。
+例：商品名、個数など   
+Please briefly summarize the contents of your request in the subject line.
+(e.g., items, quantity, etc.)
+
+申請年月日 (Application date)
+
+書類名 (Document name)
+
+部数 (Quantity)
+- 通 (copies)
+
+提出先 (Submission destination)
+
+提出理由等 (Purpose of application)
+
+添付ファイル (File attachment)
+
+備考（送付先など） (Memo (mailing address, etc.))
+
+申請フラグ (Flag)
+
+### 押印申請（契約印、銀行印） (Contract/bank seal application)
+
+契約書（代表印）、銀行印の押印はこちらから。
+
+Subject
+- 件名で内容が分かる様に簡潔に記入して下さい。
+例：商品名、個数など   
+Please briefly summarize the contents of your request in the subject line.
+(e.g., items, quantity, etc.)
+
+申請年月日 (Application date)
+
+書類名 (Document name)
+
+部数 (Quantity)
+- 通 (copies)
+
+提出先 (Submission destination)
+
+実印 (Officially registered seal)
+
+代表者印(丸印) (Legal seal)
+
+銀行印 (Bank seal)
+
+印紙貼り付け (Stamp affixing)
+
+提出理由等 (Purpose of application)
+
+添付ファイル (File attachment)
+
+備考（送付先など） (Memo (mailing address, etc.))
+
+申請フラグ (Flag)
+
+### 休日出勤申請 (Application for working on a holiday)
+
+休日出勤をする際は、事前に申請を出してください。   
+Please submit a request in advance when working on a holiday.
+
+Subject
+- 件名で内容が分かる様に簡潔に記入して下さい。
+例：商品名、個数など   
+Please briefly summarize the contents of your request in the subject line.
+(e.g., items, quantity, etc.)
+
+出勤予定日 (Planned work date)
+
+作業予定時間 (Planned working time)
+- 時間 (h)
+
+予定作業（具体的に） (Tasks (please specify))
+
+手当希望 (Preferred compensation)
+- 代休取得 (Compensatory day off)
+- 休日出勤手当 (Holiday pay)
+7時間45分以上勤務の場合は、原則代休を取得してください。   
+If you are working more than 7.75 hours, you must select "Compensatory day off".
+
+振替休日予定日 (Preferred compensatory day)
+- 7時間45分以上出勤する方は振替予定日を選択してください。  
+If you are working more than 7.75 hours, please select the date of your compensatory holiday.
+
+備考 (Memo)
+- 【出勤理由・作業概要】   
+Purpose of attendance and task summary
+
+申請フラグ (Flag)
+
+### 在宅勤務事前申請(Apply for working from home)
 
 
-経費精算(Expense reimbursement)
-押印申請（角印）Sealing
-押印申請（契約印、銀行印）Sealing
-休日出勤申請(Apply for day-off working)
-代休付与申請(Apply for a compensatory day off)
-在宅勤務事前申請(Apply for working from home)
 取引先申請（新規・変更）
 受入連絡(Join)
 退職連絡(Leave)
