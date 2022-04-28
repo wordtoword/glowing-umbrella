@@ -45,6 +45,8 @@ Please briefly summarize the contents of your request in the subject line.
 
 ### 交通費精算書 (Travel expenses)
 
+備品・消耗品購入届(Equipment purchase)
+文具やトナー、コーヒーなどの備品を発注する際に申請してください。
 
 
 
