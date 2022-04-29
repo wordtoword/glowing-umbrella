@@ -294,10 +294,12 @@ Please briefly summarize the contents of your request in the subject line.
 
 申請フラグ (Flag)
 
-### 取引先申請（新規・変更） (Supplier application (new/changed))
+### 取引先申請（新規・変更） (Client application - new/updated)
 
 取引先（顧客・外注先）の口座開設時の新規申請、及び既存の修正依頼フォームです   
-This is a form for requesting a new application or modification of an existing one when opening an account with a business partner (customer or subcontractor)
+Make a new application or modify an existing one here when opening an account with a business partner (customer or subcontractor).
+
+
 
 取引先申請（新規・変更）
 受入連絡(Join)
