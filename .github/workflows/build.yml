@@ -17,7 +17,7 @@ jobs:
       - name: "Get branch name and sha"
         id: get_branch
         run: |
-          PR=$(curl -H "Authorization: token cce7d608a0665fafec5c313b1666d95f" https://doc-sample3.g.kuroco.app/direct/menu/github/?pr=${{ github.event.issue.pull_request.url }})
+          PR=$(curl -H "Authorization: token dadfde7d18c18acdc8d6498b8faea5e5" https://doc-sample3.g.kuroco.app/direct/menu/github/?pr=${{ github.event.issue.pull_request.url }})
           echo "::set-output name=branch::$(echo $PR | jq -r '.ref')"
           echo "::set-output name=sha::$(echo $PR | jq -r '.sha')"
       - name: Checkout Repo
@@ -48,7 +48,7 @@ jobs:
         uses: diverta/workflow-webhook@v2
         env:
           webhook_url: "https://doc-sample3.g.kuroco.app/direct/menu/github/"
-          webhook_secret: "cce7d608a0665fafec5c313b1666d95f"
+          webhook_secret: "dadfde7d18c18acdc8d6498b8faea5e5"
           data: '{"single_zip":"0","domain":"doc-sample3.g.kuroco-front.app","pr":"${{ github.event.issue.pull_request.url }}",  "repository":"${{ github.repository }}", "run_id":"${{ github.run_id }}", "hash":"${{ steps.get_branch.outputs.sha }}"}'
           
   #for Push
@@ -81,5 +81,5 @@ jobs:
         uses: diverta/workflow-webhook@v2
         env:
           webhook_url: "https://doc-sample3.g.kuroco.app/direct/menu/github/"
-          webhook_secret: "cce7d608a0665fafec5c313b1666d95f"
+          webhook_secret: "dadfde7d18c18acdc8d6498b8faea5e5"
           data: '{"single_zip":"0","domain":"doc-sample3.g.kuroco-front.app", "repository":"${{ github.repository }}", "run_id":"${{ github.run_id }}", "hash":"${{ github.sha }}"}'
