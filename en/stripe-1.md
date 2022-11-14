@@ -37,13 +37,13 @@ First, you will need to obtain the API keys and webhook from Stripe and enter th
 
 ### Obtaining API keys from Stripe
 
-1. In your browser, go to the [Stripe dashboard](https://dashboard.stripe.com/) and click [Developers] in the upper right corner.
-2. On the Developers page, select [API keys] in the left sidebar menu.     
+1. In your browser, go to the [Stripe dashboard](https://dashboard.stripe.com/) and select your mode ("Developer" or "Test mode") in the upper right corner.
+2. On the next page, select [API keys] in the left sidebar menu.     
 3. You will see the [Publishable key] and the [Secret key]. Note them down for later use.
 
 <!-- [![Image from Gyazo](https://t.gyazo.com/teams/diverta/0c690e9687ed4e419ac44c859b8831e6.png)](https://diverta.gyazo.com/0c690e9687ed4e419ac44c859b8831e6) -->
 
-[[info]] Some screenshots in this tutorial were taken in test mode. However, for your live website, be sure to toggle test mode off. This is important, as the API keys for test mode and for production mode are different.
+[[info]] It is important to select the correct mode for your purposes ("Developer" or "Test mode") when performing your integration, as they have different API keys. If you need to switch modes, make sure to copy the keys again and update them in your Kuroco admin panel.
 
 [![Image from Gyazo](https://t.gyazo.com/teams/diverta/ec2dbef4271532d54405311499d2889c.png)](https://diverta.gyazo.com/ec2dbef4271532d54405311499d2889c)
 
@@ -124,7 +124,7 @@ The next step is to add your product(s) in Stripe and in Kuroco.
 ### Kuroco
 
 1. Next, go to your Kuroco admin panel and create an empty member group for your product. If you have more than one product, each product should have a separate group.    
-[[info]] For a tutorial on how to create new groups, see [Creating groups](/docs/tutorials/how-to-make-new-group/).
+[[info]] Note: For a tutorial on how to create new groups, see [Creating groups](/docs/tutorials/how-to-make-new-group/).
 
 2. From the group list, click the name of the group you just created to edit it.
 3. On the Group editor screen, enter the API ID you copied from Stripe into "Stripe price ID".
@@ -149,7 +149,7 @@ Calling either endpoint returns a JSON response containing the relevant Stripe U
 
 ### Endpoint configuration
 
-[[info]] Note: To use the payment functionality, you must use cookies or dynamic tokens as your API security settings.
+[[info]] To use the payment functionality, you must use cookies or dynamic tokens as your API security settings.
 
 <!--
 [![Image from Gyazo](https://t.gyazo.com/teams/diverta/e806f56c501dd75139ed612381965027.png)](https://diverta.gyazo.com/e806f56c501dd75139ed612381965027)
