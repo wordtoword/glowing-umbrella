@@ -44,7 +44,7 @@ In your browser, go to the [Stripe dashboard](https://dashboard.stripe.com/) and
 On the next page, select [API keys] in the left sidebar menu.     
 You will see the [Publishable key] and the [Secret key]. Copy them for later use.
 
-[[info]] Some screenshots in this tutorial were taken in test mode. However, for your live website, be sure to toggle test mode off. This is important, as the API keys for test mode and for production mode are different.
+[[info]] It is important to select the correct mode for your purposes ("Developer" or "Test mode") when performing your integration, as they have different API keys. If you need to switch modes, make sure to copy the keys again and update them in your Kuroco admin panel.
 
 [![Image from Gyazo](https://t.gyazo.com/teams/diverta/ec2dbef4271532d54405311499d2889c.png)](https://diverta.gyazo.com/ec2dbef4271532d54405311499d2889c)
 
@@ -133,7 +133,9 @@ From the group list, click the name of the group you just created.
 
 [![Image from Gyazo](https://t.gyazo.com/teams/diverta/e81e5bf8059255990282938646463d7f.png)](https://diverta.gyazo.com/e81e5bf8059255990282938646463d7f)
 
-On the Group editor screen, enter the API ID you copied from Stripe into the "Stripe plan ID" field.
+On the Group editor screen, enter the API ID you copied from Stripe into "Stripe price ID".
+
+[[info]] The "Stripe price ID" field only appears on admin panels with Stripe successfully integrated. If you do not see this field, go back to the integration step above and check if all your inputs and settings are correct.
 
 [![Image from Gyazo](https://t.gyazo.com/teams/diverta/78f1935551a531aca28173a429c81e57.png)](https://diverta.gyazo.com/78f1935551a531aca28173a429c81e57)
 
@@ -204,9 +206,7 @@ Copy the URL in the response body.
 
 Access the URL in your browser. You should see the payment screen below. Enter your payment details and click [Subscribe].
 
-[[info]]
-Test cards can be used to simulate several scenarios.  
-https://stripe.com/docs/testing#international-cards
+[[info]] You can use [test cards](https://stripe.com/docs/testing#international-cards) to simulate various scenarios.  
 
 [![Image from Gyazo](https://t.gyazo.com/teams/diverta/e00d97f4fa571111e43c869924f2eba5.png)](https://diverta.gyazo.com/e00d97f4fa571111e43c869924f2eba5)
 
@@ -214,7 +214,7 @@ If the payment was successful, you will be redirected to the payment success pag
 
 [![Image from Gyazo](https://t.gyazo.com/teams/diverta/0029537b14a95543876fc455a60b3a91.png)](https://diverta.gyazo.com/0029537b14a95543876fc455a60b3a91)
 
-Once completed, the member is automatically added to the member group(s) for the product(s). They will also automatically receive a Stripe member ID and subscription ID attached to their Kuroco account. For more details, see [Second tutorial - Customer ID & Subscription ID](#link).
+Once completed, the member is automatically added to the member group(s) for the product(s). They will also receive a Stripe member ID and subscription ID attached to their Kuroco account. For more details, see [Second tutorial - Customer ID & Subscription ID](#link).
 
 
 ### Verifying the subscription cancellation
@@ -227,7 +227,7 @@ Scroll down and click [Execute].
 
 [![Image from Gyazo](https://t.gyazo.com/teams/diverta/e9e79640827b9df7295d00da4803c7f7.png)](https://diverta.gyazo.com/e9e79640827b9df7295d00da4803c7f7)
 
-The member will be automatically removed from the associated product groups, and their Stripe subscription ID will be automatically unlinked from their Kuroco account. For more details, see [Second tutorial - Customer ID & Subscription ID](#link).
+The member will be automatically removed from the associated product groups, and their Stripe subscription ID will be unlinked from their Kuroco account. For more details, see [Second tutorial - Customer ID & Subscription ID](#link).
 
 [[info]] Note that subscriptions are canceled immediately without redirecting to a confirmation page. 
 
