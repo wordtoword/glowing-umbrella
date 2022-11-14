@@ -154,6 +154,8 @@ Calling either endpoint returns a JSON response containing the relevant Stripe U
 <!--
 [![Image from Gyazo](https://t.gyazo.com/teams/diverta/e806f56c501dd75139ed612381965027.png)](https://diverta.gyazo.com/e806f56c501dd75139ed612381965027)
 [![Image from Gyazo](https://t.gyazo.com/teams/diverta/060b0e609139f239dfa426948319ca16.png)](https://diverta.gyazo.com/060b0e609139f239dfa426948319ca16)
+[![Image from Gyazo](https://t.gyazo.com/teams/diverta/796d39132dc9ec8b7968d3a29d26627b.png)](https://diverta.gyazo.com/796d39132dc9ec8b7968d3a29d26627b)
+[![Image from Gyazo](https://t.gyazo.com/teams/diverta/d1589b7116a2815675a1112ce1a49378.png)](https://diverta.gyazo.com/d1589b7116a2815675a1112ce1a49378)
 -->
 
 1. In Kuroco's left sidebar menu, click [API] and select the API where you will be adding the endpoint.
@@ -169,11 +171,7 @@ Calling either endpoint returns a JSON response containing the relevant Stripe U
 | return_url     | Front-end URL for the payment success page. |
 | return_err_url | Front-end URL for the payment failure page. |
 
-[![Image from Gyazo](https://t.gyazo.com/teams/diverta/796d39132dc9ec8b7968d3a29d26627b.png)](https://diverta.gyazo.com/796d39132dc9ec8b7968d3a29d26627b)
-
-[[info]] \*For the cancellation endpoint, select [cancel_order] for "Operation". Note that the subscription is canceled immediately without redirecting to a confirmation page. 
-
-[![Image from Gyazo](https://t.gyazo.com/teams/diverta/d1589b7116a2815675a1112ce1a49378.png)](https://diverta.gyazo.com/d1589b7116a2815675a1112ce1a49378)
+[[info]] \*For the cancellation endpoint, select [cancel_order] for "Operation".
 
 4. When you are done, click [Add] to save the endpoint.
 
@@ -223,6 +221,8 @@ Scroll down and click [Execute].
 -->
 
 To test the cancellation process, repeat checkout verification steps 1 - 3 for the cancellation endpoint. The member will be automatically removed from the associated products, and their Stripe subscription ID will be automatically unlinked from their Kuroco account. For more details, see [Second tutorial - Customer ID & Subscription ID](#link).
+
+[[info]] Note that subscriptions are canceled immediately without redirecting to a confirmation page. 
 
 
 ## More information
