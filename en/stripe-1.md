@@ -220,7 +220,7 @@ Scroll down and click [Execute].
 [![Image from Gyazo](https://t.gyazo.com/teams/diverta/e9e79640827b9df7295d00da4803c7f7.png)](https://diverta.gyazo.com/e9e79640827b9df7295d00da4803c7f7)
 -->
 
-To test the cancellation process, repeat checkout verification steps 1 - 3 for the cancellation endpoint. The member will be automatically removed from the associated products, and their Stripe subscription ID will be automatically unlinked from their Kuroco account. For more details, see [Second tutorial - Customer ID & Subscription ID](#link).
+To test the cancellation process, repeat checkout verification steps 1 - 3 for the cancellation endpoint. The member will be automatically removed from the associated product groups, and their Stripe subscription ID will be automatically unlinked from their Kuroco account. For more details, see [Second tutorial - Customer ID & Subscription ID](#link).
 
 [[info]] Note that subscriptions are canceled immediately without redirecting to a confirmation page. 
 
