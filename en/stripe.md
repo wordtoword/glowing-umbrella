@@ -20,9 +20,7 @@ The flow for setting up the billing process is divided into three parts:
 
 ## Before you start
 
-<!--
- Before starting the Stripe integration, we recommend reading [Second tutorial - Overview](#link) to get a general understanding of how Stripe payment processing works in Kuroco.
--->
+Before starting the Stripe integration, we recommend reading [Second tutorial - Overview](#link) to get a general understanding of how Stripe payment processing works in Kuroco.
 
 
 ## Stripe integration
