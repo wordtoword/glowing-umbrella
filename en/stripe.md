@@ -11,11 +11,19 @@ This tutorial explains how to integrate Stripe into Kuroco and set up recurrent 
 
 The flow for the whole setup process is divided into three parts:
 
-1. [Integrating Stripe into Kuroco](#stripe-integration)<ul><li>[Getting the API keys from Stripe](#obtaining-api-keys-from-stripe)</li><li>[Creating a webhook in Stripe](#creating-your-webhook-in-stripe)</li><li>[Integration setup in Kuroco](#integrating-stripe-into-kuroco)</li></ul>
+* [Integrating Stripe into Kuroco](#stripe-integration)
+  - [Getting the API keys from Stripe](#obtaining-api-keys-from-stripe)
+  - [Creating a webhook in Stripe](#creating-your-webhook-in-stripe)
+  - [Integration setup in Kuroco](#integrating-stripe-into-kuroco)
 
-2. [Adding your product(s)](#adding-your-products)<ul><li>[In Stripe](#stripe)</li><li>[In Kuroco](#kuroco)</li></ul>
+* [Adding your product(s)](#adding-your-products)
+  - [In Stripe](#stripe)
+  - [In Kuroco](#kuroco)
 
-3. [Setting up APIs](#api-setup)<ul><li>[Creating a checkout and a cancellation endpoint](#endpoint-configuration)</li><li>[Verifying the checkout endpoint](#verifying-the-billing-process)</li><li>[Verifying the cancellation endpoint](#verifying-the-subscription-cancellation)</li></ul>
+* [Setting up the API](#api-setup)
+  - [Creating a checkout and a cancellation endpoint](#endpoint-configuration)
+  - [Verifying the checkout endpoint](#verifying-the-billing-process)
+  - [Verifying the cancellation endpoint](#verifying-the-subscription-cancellation)
 
 
 ## Before you start
@@ -29,12 +37,12 @@ First, you will need to obtain the API keys and webhook from Stripe and enter th
 
 ### Obtaining API keys from Stripe
 
-In your browser, go to the [Stripe dashboard](https://dashboard.stripe.com/) and click [Developers] in the upper right corner.
+In your browser, go to the [Stripe dashboard](https://dashboard.stripe.com/) and select your mode ("Developer" or "Test mode") in the upper right corner.
 
 [![Image from Gyazo](https://t.gyazo.com/teams/diverta/0c690e9687ed4e419ac44c859b8831e6.png)](https://diverta.gyazo.com/0c690e9687ed4e419ac44c859b8831e6)
 
-On the Developers page, select [API keys] in the left sidebar menu.     
-You will see the [Publishable key] and the [Secret key]. Note them down for later use.
+On the next page, select [API keys] in the left sidebar menu.     
+You will see the [Publishable key] and the [Secret key]. Copy them for later use.
 
 [[info]] Some screenshots in this tutorial were taken in test mode. However, for your live website, be sure to toggle test mode off. This is important, as the API keys for test mode and for production mode are different.
 
@@ -70,7 +78,7 @@ In Kuroco's left sidebar menu, under “SETTINGS”, select [External system int
 
 [![Image from Gyazo](https://t.gyazo.com/teams/diverta/4f920429811751b809043c3eaeaefe4c.png)](https://diverta.gyazo.com/4f920429811751b809043c3eaeaefe4c)
 
-On the Stripe integration screen, enter the keys you copied down earlier from the Stripe UI.
+On the Stripe integration screen, enter the keys you copied from Stripe UI in the corresponding fields.
 
 [![Image from Gyazo](https://t.gyazo.com/teams/diverta/d2d1503862df4a5e06adbb3bc0610128.png)](https://diverta.gyazo.com/d2d1503862df4a5e06adbb3bc0610128)
 
@@ -129,7 +137,7 @@ On the Group editor screen, enter the API ID you copied from Stripe into the "St
 
 [![Image from Gyazo](https://t.gyazo.com/teams/diverta/78f1935551a531aca28173a429c81e57.png)](https://diverta.gyazo.com/78f1935551a531aca28173a429c81e57)
 
-[[info]] Note: When a member successfully completes checkout from the payment page, they will be automatically added to this product group.
+When a member successfully completes checkout from the payment page, they will be automatically added to this product group.
 
 ## API setup
 
@@ -142,9 +150,9 @@ Calling either endpoint returns a JSON response containing the relevant Stripe U
 
 ### Endpoint configuration
 
-[[info]] Note: To use the payment functionality, you must use cookies or dynamic tokens as your API security settings.
+[[info]] To use the payment functionality, you must use cookies or dynamic tokens as your API security settings.
 
-In the left sidebar menu, click [API] and select the API to which you want to add this endpoint.
+In Kuroco's left sidebar menu, click [API] and select the API where you will be adding the endpoint.
 
 [![Image from Gyazo](https://t.gyazo.com/teams/diverta/e806f56c501dd75139ed612381965027.png)](https://diverta.gyazo.com/e806f56c501dd75139ed612381965027)
 
@@ -165,7 +173,7 @@ In the Endpoint settings dialog, enter the following:
 
 [![Image from Gyazo](https://t.gyazo.com/teams/diverta/796d39132dc9ec8b7968d3a29d26627b.png)](https://diverta.gyazo.com/796d39132dc9ec8b7968d3a29d26627b)
 
-[[info]] \*For the cancellation endpoint, select [cancel_order] for "Operation". Note that the subscription is canceled immediately without redirecting to a confirmation page. 
+[[info]] \*For the cancellation endpoint, select [cancel_order] for "Operation".
 
 [![Image from Gyazo](https://t.gyazo.com/teams/diverta/d1589b7116a2815675a1112ce1a49378.png)](https://diverta.gyazo.com/d1589b7116a2815675a1112ce1a49378)
 
@@ -219,7 +227,9 @@ Scroll down and click [Execute].
 
 [![Image from Gyazo](https://t.gyazo.com/teams/diverta/e9e79640827b9df7295d00da4803c7f7.png)](https://diverta.gyazo.com/e9e79640827b9df7295d00da4803c7f7)
 
-The member will be automatically removed from this subscription. Their Stripe subscription ID will also be automatically unlinked from their Kuroco account. For more details, see [Second tutorial - Customer ID & Subscription ID](#link).
+The member will be automatically removed from the associated product groups, and their Stripe subscription ID will be automatically unlinked from their Kuroco account. For more details, see [Second tutorial - Customer ID & Subscription ID](#link).
+
+[[info]] Note that subscriptions are canceled immediately without redirecting to a confirmation page. 
 
 
 ## More information
@@ -233,9 +243,7 @@ Currently, Kuroco does not support the following payment types with Stripe:
 - One-time purchases
 - Multiple subscriptions\*
 
-<!-- TO BE ADDED
 [[info]] \*Note: For more information, see [Second tutorial](#link) or contact our [Support Team](https://kuroco.zendesk.com/hc/en-us).
--->
 
 
 ### Stripe CLI
