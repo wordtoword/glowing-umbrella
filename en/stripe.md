@@ -9,7 +9,7 @@ This tutorial explains how to integrate Stripe into Kuroco and set up recurrent 
 
 ## What you'll learn
 
-The flow for setting up the billing process is divided into three parts:
+The flow for the whole setup process is divided into three parts:
 
 1. [Integrating Stripe into Kuroco](#stripe-integration)<ul><li>[Getting the API keys from Stripe](#obtaining-api-keys-from-stripe)</li><li>[Creating a webhook in Stripe](#creating-your-webhook-in-stripe)</li><li>[Integration setup in Kuroco](#integrating-stripe-into-kuroco)</li></ul>
 
