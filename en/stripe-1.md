@@ -193,7 +193,7 @@ To check if your billing process is working as expected, verify the endpoint res
 3. Scroll down and click [Execute].
 4. Copy the URL in the response body.
 
-[![Image from Gyazo](https://t.gyazo.com/teams/diverta/206d0d045e3ac50628f55088b53d5000.png)](https://diverta.gyazo.com/206d0d045e3ac50628f55088b53d5000)
+[![Image from Gyazo](https://t.gyazo.com/teams/diverta/bd0480d5b7ba9a21dd703119387b99ac.jpg)](https://diverta.gyazo.com/bd0480d5b7ba9a21dd703119387b99ac)
 
 5. Access the URL in your browser. You should see the payment screen below. Enter your payment details and click [Subscribe].
 
