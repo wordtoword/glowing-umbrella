@@ -37,11 +37,12 @@ First, you will need to obtain the API keys and webhook from Stripe and enter th
 
 ### Obtaining API keys from Stripe
 
-1. In your browser, go to the [Stripe dashboard](https://dashboard.stripe.com/) and select your mode ("Developer" or "Test mode") in the upper right corner.
-2. On the next page, select [API keys] in the left sidebar menu.     
-3. You will see the [Publishable key] and the [Secret key]. Copy them for later use.
+In your browser, go to the [Stripe dashboard](https://dashboard.stripe.com/) and select your mode ("Developer" or "Test mode") in the upper right corner.
 
-<!-- [![Image from Gyazo](https://t.gyazo.com/teams/diverta/0c690e9687ed4e419ac44c859b8831e6.png)](https://diverta.gyazo.com/0c690e9687ed4e419ac44c859b8831e6) -->
+[![Image from Gyazo](https://t.gyazo.com/teams/diverta/0c690e9687ed4e419ac44c859b8831e6.png)](https://diverta.gyazo.com/0c690e9687ed4e419ac44c859b8831e6)
+
+On the next page, select [API keys] in the left sidebar menu.     
+You will see the [Publishable key] and the [Secret key]. Copy them for later use.
 
 [[info]] It is important to select the correct mode for your purposes ("Developer" or "Test mode") when performing your integration, as they have different API keys. If you need to switch modes, make sure to copy the keys again and update them in your Kuroco admin panel.
 
@@ -49,14 +50,15 @@ First, you will need to obtain the API keys and webhook from Stripe and enter th
 
 ### Creating your webhook in Stripe
 
-<!--
-[![Image from Gyazo](https://t.gyazo.com/teams/diverta/3c8abbd3fc861a4a343b3ca590460d7f.png)](https://diverta.gyazo.com/3c8abbd3fc861a4a343b3ca590460d7f)
-[![Image from Gyazo](https://t.gyazo.com/teams/diverta/94aa9e09dd6d2d44b2a63a57b92cdc06.png)](https://diverta.gyazo.com/94aa9e09dd6d2d44b2a63a57b92cdc06)
--->
+Next, select [Webhooks] in the side menu. On the Webhooks page, click [Add an endpoint].
 
-1. Next, select [Webhooks] in the side menu. On the Webhooks page, click [Add an endpoint].
-2. You will be redirected to the webhook configuration page, where you will add a webhook that allows Kuroco to determine if the Stripe payment was successful.
-3. Set up your webhook as follows:
+[![Image from Gyazo](https://t.gyazo.com/teams/diverta/3c8abbd3fc861a4a343b3ca590460d7f.png)](https://diverta.gyazo.com/3c8abbd3fc861a4a343b3ca590460d7f)
+
+You will be redirected to the webhook configuration page, where you will add a webhook that allows Kuroco to determine if the Stripe payment was successful.
+
+[![Image from Gyazo](https://t.gyazo.com/teams/diverta/94aa9e09dd6d2d44b2a63a57b92cdc06.png)](https://diverta.gyazo.com/94aa9e09dd6d2d44b2a63a57b92cdc06)
+
+Set up your webhook as follows:
 
 | Field        | Value                                                                      |
 | :---         | :---                                                                               |
@@ -66,27 +68,29 @@ First, you will need to obtain the API keys and webhook from Stripe and enter th
 | Version      | Select the latest current version of your account.                                 |
 | Events       | Click [+ Select events] and select the following events from the dropdown list:<ul><li>`customer.subscription.created`</li><li>`customer.subscription.deleted`</li><li>`customer.subscription.updated`</ul></li>Click [Add events] when you are done. |
 
-4. When you are done, click [Add endpoint] to add the new endpoint to your Stripe dashboard.
-5. After you have added your endpoint, click [Reveal signing secret] to see the webhook secret. Copy it for later use.
+When you are done, click [Add endpoint] to add the new endpoint to your Stripe dashboard.
+
+After you have added your endpoint, click [Reveal signing secret] to see the webhook secret. Copy it for later use.
 
 ### Integrating Stripe into Kuroco
 
-1. In Kuroco's left sidebar menu, under “SETTINGS”, select [External system integration] -> [Stripe].   
-2. On the Stripe integration screen, enter the keys you copied from Stripe UI in the corresponding fields.
+In Kuroco's left sidebar menu, under “SETTINGS”, select [External system integration] -> [Stripe].   
+
+[![Image from Gyazo](https://t.gyazo.com/teams/diverta/4f920429811751b809043c3eaeaefe4c.png)](https://diverta.gyazo.com/4f920429811751b809043c3eaeaefe4c)
+
+On the Stripe integration screen, enter the keys you copied from Stripe UI in the corresponding fields.
+
+[![Image from Gyazo](https://t.gyazo.com/teams/diverta/d2d1503862df4a5e06adbb3bc0610128.png)](https://diverta.gyazo.com/d2d1503862df4a5e06adbb3bc0610128)
 
 | Field           | Value                                      |
-| :---            | :---                                       |
+| :---            | :---                                                |
 | Status          | Select "Enable".         |
 | Publishable key | Enter the publishable key you copied.          |
 | Secret key      | Enter the secret key you copied.               |
 | Webhook secret  | Enter the signing secret you copied.           |
 
-3. When you are done, click [Update] to apply these changes.
+When you are done, click [Update] to apply these changes.
 
-<!--
-[![Image from Gyazo](https://t.gyazo.com/teams/diverta/4f920429811751b809043c3eaeaefe4c.png)](https://diverta.gyazo.com/4f920429811751b809043c3eaeaefe4c)
-[![Image from Gyazo](https://t.gyazo.com/teams/diverta/d2d1503862df4a5e06adbb3bc0610128.png)](https://diverta.gyazo.com/d2d1503862df4a5e06adbb3bc0610128)
--->
 
 ## Adding your product(s)
 
@@ -94,14 +98,13 @@ The next step is to add your product(s) in Stripe and in Kuroco.
 
 ### Stripe
 
-1. In the top bar menu, click [Products].    
-2. Then, select [All products] from the left sidebar.    
-3. On the Products page, click [+ Add a product].
-4. You will be redirected to the Add product page. Fill in the details of your product as follows. For more information, refer to the [Stripe docs: Manage products and prices](https://stripe.com/docs/products-prices/manage-prices).
+In the top bar menu, click [Products].    
+Then, select [All products] from the left sidebar.    
+On the Products page, click [+ Add a product].
 
-<!--
 [![Image from Gyazo](https://t.gyazo.com/teams/diverta/1aefcbb50634fb03981076f1e6b47033.png)](https://diverta.gyazo.com/1aefcbb50634fb03981076f1e6b47033)
--->
+
+You will be redirected to the Add product page. Fill in the details of your product as follows. For more information, refer to the [Stripe docs: Manage products and prices](https://stripe.com/docs/products-prices/manage-prices).
 
 | Field          | Description                                                              |
 | :---           | :---                                                                     |
@@ -111,32 +114,32 @@ The next step is to add your product(s) in Stripe and in Kuroco.
 | Recurring      | Select [Recurring].                   |
 | Billing period | Select your billing period (interval of time between each statement). |
 
-5. When you are done, click [Save product] to add your product to the Stripe database.
-6. You will be redirected to the Details page. Under "Pricing", find the API ID and copy it for later use.
+When you are done, click [Save product] to add your product to the Stripe database.
 
-<!--
 [![Image from Gyazo](https://t.gyazo.com/teams/diverta/d25df95fe43ed69f9fa8eaa6d7111fb2.png)](https://diverta.gyazo.com/d25df95fe43ed69f9fa8eaa6d7111fb2)
--->
+
+You will be redirected to the Details page. Under "Pricing", find the API ID and copy it for later use.
+
 [![Image from Gyazo](https://t.gyazo.com/teams/diverta/f5dd7ab131ccb3607d2d6ab11fcb150e.png)](https://diverta.gyazo.com/f5dd7ab131ccb3607d2d6ab11fcb150e)
 
-7. To add another product, repeat the above steps under "[Adding your product](#adding-your-product)".
+To add another product, repeat the above steps under "[Adding your product](#adding-your-product)".
 
 ### Kuroco
 
-1. Next, go to your Kuroco admin panel and create an empty member group for your product. If you have more than one product, each product should have a separate group.    
-[[info]] Note: For a tutorial on how to create new groups, see [Creating groups](/docs/tutorials/how-to-make-new-group/).
+Next, go to your Kuroco admin panel and create an empty member group for your product. If you have more than one product, each product should have a separate group.    
+(For a tutorial on how to create new groups, see [Creating groups](/docs/tutorials/how-to-make-new-group/).)
 
-2. From the group list, click the name of the group you just created to edit it.
-3. On the Group editor screen, enter the API ID you copied from Stripe into "Stripe price ID".
+From the group list, click the name of the group you just created.
+
+[![Image from Gyazo](https://t.gyazo.com/teams/diverta/e81e5bf8059255990282938646463d7f.png)](https://diverta.gyazo.com/e81e5bf8059255990282938646463d7f)
+
+On the Group editor screen, enter the API ID you copied from Stripe into "Stripe price ID".
 
 [[info]] The "Stripe price ID" field only appears on admin panels with Stripe successfully integrated. If you do not see this field, go back to the integration step above and check if all your inputs and settings are correct.
 
-<!--
-[![Image from Gyazo](https://t.gyazo.com/teams/diverta/e81e5bf8059255990282938646463d7f.png)](https://diverta.gyazo.com/e81e5bf8059255990282938646463d7f)
--->
 [![Image from Gyazo](https://t.gyazo.com/teams/diverta/78f1935551a531aca28173a429c81e57.png)](https://diverta.gyazo.com/78f1935551a531aca28173a429c81e57)
 
-When a member completes checkout from the payment page, they will be automatically added to this product group.
+When a member successfully completes checkout from the payment page, they will be automatically added to this product group.
 
 ## API setup
 
@@ -151,16 +154,15 @@ Calling either endpoint returns a JSON response containing the relevant Stripe U
 
 [[info]] To use the payment functionality, you must use cookies or dynamic tokens as your API security settings.
 
-<!--
-[![Image from Gyazo](https://t.gyazo.com/teams/diverta/e806f56c501dd75139ed612381965027.png)](https://diverta.gyazo.com/e806f56c501dd75139ed612381965027)
-[![Image from Gyazo](https://t.gyazo.com/teams/diverta/060b0e609139f239dfa426948319ca16.png)](https://diverta.gyazo.com/060b0e609139f239dfa426948319ca16)
-[![Image from Gyazo](https://t.gyazo.com/teams/diverta/796d39132dc9ec8b7968d3a29d26627b.png)](https://diverta.gyazo.com/796d39132dc9ec8b7968d3a29d26627b)
-[![Image from Gyazo](https://t.gyazo.com/teams/diverta/d1589b7116a2815675a1112ce1a49378.png)](https://diverta.gyazo.com/d1589b7116a2815675a1112ce1a49378)
--->
+In Kuroco's left sidebar menu, click [API] and select the API where you will be adding the endpoint.
 
-1. In Kuroco's left sidebar menu, click [API] and select the API where you will be adding the endpoint.
-2. On the endpoint list screen, click [Add new endpoint]. 
-3. In the Endpoint settings dialog, enter the following:
+[![Image from Gyazo](https://t.gyazo.com/teams/diverta/e806f56c501dd75139ed612381965027.png)](https://diverta.gyazo.com/e806f56c501dd75139ed612381965027)
+
+On the endpoint list screen, click [Add new endpoint]. 
+
+[![Image from Gyazo](https://t.gyazo.com/teams/diverta/060b0e609139f239dfa426948319ca16.png)](https://diverta.gyazo.com/060b0e609139f239dfa426948319ca16)
+
+In the Endpoint settings dialog, enter the following:
 
 | Field | Value |
 | :--- | :--- |
@@ -171,46 +173,52 @@ Calling either endpoint returns a JSON response containing the relevant Stripe U
 | return_url     | Front-end URL for the payment success page. |
 | return_err_url | Front-end URL for the payment failure page. |
 
+[![Image from Gyazo](https://t.gyazo.com/teams/diverta/796d39132dc9ec8b7968d3a29d26627b.png)](https://diverta.gyazo.com/796d39132dc9ec8b7968d3a29d26627b)
+
 [[info]] \*For the cancellation endpoint, select [cancel_order] for "Operation".
 
-4. When you are done, click [Add] to save the endpoint.
+[![Image from Gyazo](https://t.gyazo.com/teams/diverta/d1589b7116a2815675a1112ce1a49378.png)](https://diverta.gyazo.com/d1589b7116a2815675a1112ce1a49378)
+
+When you are done, click [Add] to save the endpoint.
 
 
 ### Verifying the billing process
 
-<!-- VIDEO: [![Image from Gyazo](https://t.gyazo.com/teams/diverta/405f30e1cfcef72cede37b86a45d1335.gif)](https://diverta.gyazo.com/405f30e1cfcef72cede37b86a45d1335) 
-[![Image from Gyazo](https://t.gyazo.com/teams/diverta/03fdaee9d13b521b773e7aed365d83e0.png)](https://diverta.gyazo.com/03fdaee9d13b521b773e7aed365d83e0)
-[![Image from Gyazo](https://t.gyazo.com/teams/diverta/cc0926ce21366db86a5a545014dfe375.png)](https://diverta.gyazo.com/cc0926ce21366db86a5a545014dfe375)
-[![Image from Gyazo](https://t.gyazo.com/teams/diverta/13a558163253ed7b19acf9805a2898a6.png)](https://diverta.gyazo.com/13a558163253ed7b19acf9805a2898a6)
-[![Image from Gyazo](https://t.gyazo.com/teams/diverta/e00d97f4fa571111e43c869924f2eba5.png)](https://diverta.gyazo.com/e00d97f4fa571111e43c869924f2eba5)
-[![Image from Gyazo](https://t.gyazo.com/teams/diverta/0029537b14a95543876fc455a60b3a91.png)](https://diverta.gyazo.com/0029537b14a95543876fc455a60b3a91)
--->
+<!-- VIDEO: [![Image from Gyazo](https://t.gyazo.com/teams/diverta/405f30e1cfcef72cede37b86a45d1335.gif)](https://diverta.gyazo.com/405f30e1cfcef72cede37b86a45d1335) -->
 
 To check if your billing process is working as expected, verify the endpoint response from the Swagger UI and make a test payment.
 
-1. From the sidebar menu, select the API containing your checkout endpoint. On the endpoint list screen, click [Swagger UI].
-2. On the Swagger UI screen, select your checkout endpoint and click [Try it out].
-3. Scroll down and click [Execute].
-4. Copy the URL in the response body.
+From the sidebar menu, select the API containing your checkout endpoint. On the endpoint list screen, click [Swagger UI].
 
-[![Image from Gyazo](https://t.gyazo.com/teams/diverta/bd0480d5b7ba9a21dd703119387b99ac.jpg)](https://diverta.gyazo.com/bd0480d5b7ba9a21dd703119387b99ac)
+[![Image from Gyazo](https://t.gyazo.com/teams/diverta/03fdaee9d13b521b773e7aed365d83e0.png)](https://diverta.gyazo.com/03fdaee9d13b521b773e7aed365d83e0)
 
-5. Access the URL in your browser. You should see the payment screen below. Enter your payment details and click [Subscribe].
+On the Swagger UI screen, select your checkout endpoint and click [Try it out].
+
+[![Image from Gyazo](https://t.gyazo.com/teams/diverta/cc0926ce21366db86a5a545014dfe375.png)](https://diverta.gyazo.com/cc0926ce21366db86a5a545014dfe375)
+
+Scroll down and click [Execute].
+
+[![Image from Gyazo](https://t.gyazo.com/teams/diverta/13a558163253ed7b19acf9805a2898a6.png)](https://diverta.gyazo.com/13a558163253ed7b19acf9805a2898a6)
+
+Copy the URL in the response body.
+
+[![Image from Gyazo](https://t.gyazo.com/teams/diverta/206d0d045e3ac50628f55088b53d5000.png)](https://diverta.gyazo.com/206d0d045e3ac50628f55088b53d5000)
+
+Access the URL in your browser. You should see the payment screen below. Enter your payment details and click [Subscribe].
 
 [[info]] You can use [test cards](https://stripe.com/docs/testing#international-cards) to simulate various scenarios.  
 
-6. If the payment was successful, you will be redirected to the payment success page you set in your endpoint.
+[![Image from Gyazo](https://t.gyazo.com/teams/diverta/e00d97f4fa571111e43c869924f2eba5.png)](https://diverta.gyazo.com/e00d97f4fa571111e43c869924f2eba5)
 
-<!--
-Stripe-side verification steps needed
--->
+If the payment was successful, you will be redirected to the payment success page you set in your endpoint.
+
+[![Image from Gyazo](https://t.gyazo.com/teams/diverta/0029537b14a95543876fc455a60b3a91.png)](https://diverta.gyazo.com/0029537b14a95543876fc455a60b3a91)
 
 Once completed, the member is automatically added to the member group(s) for the product(s). They will also receive a Stripe member ID and subscription ID attached to their Kuroco account. For more details, see [Second tutorial - Customer ID & Subscription ID](#link).
 
 
 ### Verifying the subscription cancellation
 
-<!--
 To test the cancellation process, go to the Swagger UI and click [Try it out] for your cancellation endpoint. 
 
 [![Image from Gyazo](https://t.gyazo.com/teams/diverta/8b00ca3d85afb619f21e465a4c58f176.png)](https://diverta.gyazo.com/8b00ca3d85afb619f21e465a4c58f176)
@@ -218,9 +226,8 @@ To test the cancellation process, go to the Swagger UI and click [Try it out] fo
 Scroll down and click [Execute].
 
 [![Image from Gyazo](https://t.gyazo.com/teams/diverta/e9e79640827b9df7295d00da4803c7f7.png)](https://diverta.gyazo.com/e9e79640827b9df7295d00da4803c7f7)
--->
 
-To test the cancellation process, repeat checkout verification steps 1 - 3 for the cancellation endpoint. The member will be automatically removed from the associated product groups, and their Stripe subscription ID will be unlinked from their Kuroco account. For more details, see [Second tutorial - Customer ID & Subscription ID](#link).
+The member will be automatically removed from the associated product groups, and their Stripe subscription ID will be unlinked from their Kuroco account. For more details, see [Second tutorial - Customer ID & Subscription ID](#link).
 
 [[info]] Note that subscriptions are canceled immediately without redirecting to a confirmation page. 
 
