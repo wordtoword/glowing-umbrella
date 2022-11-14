@@ -129,7 +129,7 @@ The next step is to add your product(s) in Stripe and in Kuroco.
 2. From the group list, click the name of the group you just created to edit it.
 3. On the Group editor screen, enter the API ID you copied from Stripe into "Stripe price ID".
 
-[[info]] Note: The "Stripe price ID" field will only appear after you have successfully integrated Stripe into your Kuroco admin panel. If you do not see this field, go back to the integration step above and verify if all your inputs and settings are correct.
+[[info]] The "Stripe price ID" field only appears on admin panels with Stripe successfully integrated. If you do not see this field, go back to the integration step above and check if all your inputs and settings are correct.
 
 <!--
 [![Image from Gyazo](https://t.gyazo.com/teams/diverta/e81e5bf8059255990282938646463d7f.png)](https://diverta.gyazo.com/e81e5bf8059255990282938646463d7f)
