@@ -205,7 +205,7 @@ To check if your billing process is working as expected, verify the endpoint res
 Stripe-side verification steps needed
 -->
 
-Once completed, the member is automatically added to the member group(s) for the product(s). They will also automatically receive a Stripe member ID and subscription ID attached to their Kuroco account. For more details, see [Second tutorial - Customer ID & Subscription ID](#link).
+Once completed, the member is automatically added to the member group(s) for the product(s). They will also receive a Stripe member ID and subscription ID attached to their Kuroco account. For more details, see [Second tutorial - Customer ID & Subscription ID](#link).
 
 
 ### Verifying the subscription cancellation
@@ -220,7 +220,7 @@ Scroll down and click [Execute].
 [![Image from Gyazo](https://t.gyazo.com/teams/diverta/e9e79640827b9df7295d00da4803c7f7.png)](https://diverta.gyazo.com/e9e79640827b9df7295d00da4803c7f7)
 -->
 
-To test the cancellation process, repeat checkout verification steps 1 - 3 for the cancellation endpoint. The member will be automatically removed from the associated product groups, and their Stripe subscription ID will be automatically unlinked from their Kuroco account. For more details, see [Second tutorial - Customer ID & Subscription ID](#link).
+To test the cancellation process, repeat checkout verification steps 1 - 3 for the cancellation endpoint. The member will be automatically removed from the associated product groups, and their Stripe subscription ID will be unlinked from their Kuroco account. For more details, see [Second tutorial - Customer ID & Subscription ID](#link).
 
 [[info]] Note that subscriptions are canceled immediately without redirecting to a confirmation page. 
 
