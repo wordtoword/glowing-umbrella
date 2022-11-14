@@ -39,7 +39,7 @@ First, you will need to obtain the API keys and webhook from Stripe and enter th
 
 1. In your browser, go to the [Stripe dashboard](https://dashboard.stripe.com/) and select your mode ("Developer" or "Test mode") in the upper right corner.
 2. On the next page, select [API keys] in the left sidebar menu.     
-3. You will see the [Publishable key] and the [Secret key]. Note them down for later use.
+3. You will see the [Publishable key] and the [Secret key]. Copy them for later use.
 
 <!-- [![Image from Gyazo](https://t.gyazo.com/teams/diverta/0c690e9687ed4e419ac44c859b8831e6.png)](https://diverta.gyazo.com/0c690e9687ed4e419ac44c859b8831e6) -->
 
@@ -236,9 +236,7 @@ Currently, Kuroco does not support the following payment types with Stripe:
 - One-time purchases
 - Multiple subscriptions\*
 
-<!-- TO BE ADDED
 [[info]] \*Note: For more information, see [Second tutorial](#link) or contact our [Support Team](https://kuroco.zendesk.com/hc/en-us).
--->
 
 
 ### Stripe CLI
