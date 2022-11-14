@@ -41,7 +41,9 @@ First, you will need to obtain the API keys and webhook from Stripe and enter th
 2. On the next page, select [API keys] in the left sidebar menu.     
 3. You will see the [Publishable key] and the [Secret key]. Copy them for later use.
 
-<!-- [![Image from Gyazo](https://t.gyazo.com/teams/diverta/0c690e9687ed4e419ac44c859b8831e6.png)](https://diverta.gyazo.com/0c690e9687ed4e419ac44c859b8831e6) -->
+<!-- 
+[![Image from Gyazo](https://t.gyazo.com/teams/diverta/0c690e9687ed4e419ac44c859b8831e6.png)](https://diverta.gyazo.com/0c690e9687ed4e419ac44c859b8831e6)
+-->
 
 [[info]] It is important to select the correct mode for your purposes ("Developer" or "Test mode") when performing your integration, as they have different API keys. If you need to switch modes, make sure to copy the keys again and update them in your Kuroco admin panel.
 
