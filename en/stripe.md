@@ -11,21 +11,17 @@ This tutorial explains how to integrate Stripe into Kuroco and set up recurrent 
 
 The flow for setting up the billing process is divided into three parts:
 
-1. [Integrating Stripe into Kuroco](#stripe-integration)
-- [Getting the API keys from Stripe](#obtaining-api-keys-from-stripe)
-- [Creating a webhook in Stripe](#creating-your-webhook-in-stripe)
-- [Integration setup in Kuroco](#integrating-stripe-into-kuroco)
+1. [Integrating Stripe into Kuroco](#stripe-integration)<ul><li>[Getting the API keys from Stripe](#obtaining-api-keys-from-stripe)</li><li>[Creating a webhook in Stripe](#creating-your-webhook-in-stripe)</li><li>[Integration setup in Kuroco](#integrating-stripe-into-kuroco)</li></ul>
 
-2. [Adding your product](#adding-your-product)
-- [Integrating Stripe into your Kuroco admin panel](#stripe-integration-setup)
-- [Creating a member group for each product](#product-group-setup)
-- [Creating checkout and cancellation endpoints](#endpoint-configuration)
-- [Verifying that the payment works as expected](#verifying-the-billing-process)
+2. [Adding your product(s)](#adding-your-products)<ul><li>[In Stripe](#stripe)</li><li>[In Kuroco](#kuroco)</li></ul>
 
-<!--
+3. [Setting up APIs](#api-setup)<ul><li>[Creating a checkout and a cancellation endpoint](#endpoint-configuration)</li><li>[Verifying the checkout endpoint](#verifying-the-billing-process)</li><li>[Verifying the cancellation endpoint](#verifying-the-subscription-cancellation)</li></ul>
+
+
 ## Before you start
 
- BLAHBLAHBLAH 
+<!--
+ Before starting the Stripe integration, we recommend reading [Second tutorial - Overview](#link) to get a general understanding of how Stripe payment processing works in Kuroco.
 -->
 
 
