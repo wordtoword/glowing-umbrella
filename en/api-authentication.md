@@ -213,3 +213,96 @@ Resets the user password.
 
 }
 ```
+
+#### profile
+
+Method: `GET`
+
+Retrieves specified information on the user.
+
+##### Basic settings
+
+| Parameter | Required/optional | Description | Type |
+| :--- | :--- | :--- | :--- |
+| basic_info | | User information corresponding to member information data variables. | String. Enter each data variable in a new row. |
+
+##### Sample request
+
+```
+{
+
+}
+```
+
+##### Sample response
+
+```
+{
+  "name1": "A.",
+  "name2": "Tester",
+  "member_id": 12,
+  "group_ids": {
+    "1": "Admin",
+    "2": "Content editor"
+  },
+  "geo_country_code": "JP",
+  "geo_region": "15",
+  "geo_conn_speed": "broadband"
+}
+```
+
+#### gcs_info
+
+Method: `POST`
+
+Retrieves specified information on the user.
+
+##### Basic settings
+
+| Parameter | Required/optional | Description | Type |
+| :--- | :--- | :--- | :--- |
+| basic_info | | User information corresponding to member information data variables. | String. Enter each data variable in a new row. |
+
+##### Sample request
+
+```
+{
+
+}
+```
+
+##### Sample response
+
+```
+{
+
+}
+```
+
+#### firebaseToken
+
+Method: `POST`
+
+Unknown.
+
+##### Basic settings
+
+| Parameter | Required/optional | Description | Type |
+| :--- | :--- | :--- | :--- |
+| firebaseConfig | | Unknown. | Dropdown |
+
+##### Sample request
+
+```
+{
+
+}
+```
+
+##### Sample response
+
+```
+{
+  "token": ""
+}
+```
