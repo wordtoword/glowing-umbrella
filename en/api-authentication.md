@@ -200,7 +200,7 @@ Resets the user password.
 
 ```
 {
-  "login_id": "12",
+  "login_id": "test1@aaa.com",
   "current_password": "12345aaa",
   "new_password": "67890aaa"
 }
@@ -210,7 +210,8 @@ Resets the user password.
 
 ```
 {
-
+  "errors": [],
+  "messages": []
 }
 ```
 
